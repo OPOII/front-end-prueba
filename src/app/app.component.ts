@@ -54,8 +54,9 @@ export class AppComponent implements OnInit {
     this.personaService.deletePersona(persona.id).subscribe(resp=>{
       if(resp===true){
         this.cadena.pop(persona)
-        this.cadenaForm.reset();
+        
       }
+      this.cadenaForm.reset();
     })
   }
 

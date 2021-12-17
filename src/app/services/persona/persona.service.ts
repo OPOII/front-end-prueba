@@ -23,7 +23,7 @@ export class PersonaService {
   }
 
   public deletePersona(id:any):Observable<any>{
-    return this.httpClient.delete(this.API_SERVER + "delete/"+id);
+    return this.httpClient.delete<RequestRespose>(this.API_SERVER + "delete/"+id);
   }
 
 }
